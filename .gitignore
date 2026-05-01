@@ -1,4 +1,9 @@
 node_modules/
+<<<<<<< HEAD
 .angular/
 dist/
 .env
+=======
+.env
+dist/
+>>>>>>> b415bcca4065bb75559009462a9638576809fb52
