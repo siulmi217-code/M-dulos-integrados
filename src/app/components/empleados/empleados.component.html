@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+
+    <!-- FORMULARIO CENTRADO -->
+    <div class="col s12 m6 offset-m3">
+      <div class="card">
+        <div class="card-content">
+
+          <span class="card-title center-align">Formulario de Empleados</span>
+
+          <form #empleadoForm="ngForm" (ngSubmit)="agregarEmpleado(empleadoForm)">
+
+            <div class="row">
+
+              <div class="input-field col s12">
+                <input type="text" name="name"
+                  [(ngModel)]="empleadoService.selectedEmpleado.name"
+                  placeholder="Ingrese su nombre">
+              </div>
+
+              <div class="input-field col s12">
+                <input type="text" name="position"
+                  [(ngModel)]="empleadoService.selectedEmpleado.position"
+                  placeholder="Ingrese su cargo">
+              </div>
+
+              <div class="input-field col s12">
+                <input type="text" name="office"
+                  [(ngModel)]="empleadoService.selectedEmpleado.office"
+                  placeholder="Ingrese su lugar de trabajo">
+              </div>
+
+              <div class="input-field col s12">
+                <input type="number" name="salary"
+                  [(ngModel)]="empleadoService.selectedEmpleado.salary"
+                  placeholder="Ingrese su salario">
+              </div>
+
+            </div>
+
+            <!-- BOTONES CENTRADOS -->
+            <div class="card-action center-align">
+              <button class="btn" type="submit" style="margin-right:10px;">
+                Guardar
+              </button>
+
+              <button type="button" class="btn"
+                (click)="resetForm(empleadoForm)">
+                Limpiar
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
